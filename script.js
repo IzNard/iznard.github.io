@@ -167,6 +167,8 @@ const profileStatusText = document.getElementById('profile-status-text');
     }
   };
   startBtn.addEventListener('click', () => {
+    intro.classList.add('hidden');
+    initThreeJS();
     const backgroundMusic = new Audio('boom.mp3'); 
     backgroundMusic.volume = 0.5;
     
@@ -174,7 +176,7 @@ const profileStatusText = document.getElementById('profile-status-text');
     backgroundMusic.play().catch(error => {
         console.error("Audio playback failed:", error);
     });
-    initThreeJS();
+   
     
 });
   function createBigBang() {
