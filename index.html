@@ -34,14 +34,14 @@
 </head>
 <body>
   <div id="intro">
-    <button id="startBtn">💥<div class="label">Haz click para crear el universo</div></button>
+    <button id="startBtn">💥      <div class="label">Click to create</div></button>
   </div>
   <div id="three-container"></div>
-  <button id="backTop">← Volver</button>
+  <button id="backTop">← Back</button>
   <div id="details">
     <div id="detailInner"></div>
   </div>
-  <div id="footerTip">Izan — Portfolio Interactivo</div>
+  <div id="footerTip">Izan — Interactive Portfolio</div>
 
   <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
   
@@ -60,151 +60,151 @@
 
   const skillsData = {
     fisica: {
-      name: "Física",
+      name: "Physics",
       icon: "⚛️",
       color: 0x7df9ff,
       size: 8,
       distance: 0,
       speed: 0,
-      content: `<h2>⚛️ Física</h2>
+      content: `<h2>⚛️ Physics</h2>
         <div style="margin-top:30px">
           <div class="skill-block">
-            <h3>Mecánica Clásica</h3>
-            <p>Especialización profunda en los principios fundamentales del movimiento y las fuerzas.</p>
+            <h3>Classical Mechanics</h3>
+            <p>Deep specialization in the fundamental principles of motion and forces.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Electromagnetismo</h3>
-            <p>Comprensión de campos eléctricos y magnéticos, y sus aplicaciones prácticas.</p>
+            <h3>Electromagnetism</h3>
+            <p>Understanding of electric and magnetic fields and their practical applications.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Relatividad Especial</h3>
-            <p>Dominio de la teoría de Einstein sobre el espacio-tiempo y velocidades cercanas a la luz.</p>
+            <h3>Special Relativity</h3>
+            <p>Mastery of Einstein's theory of spacetime and velocities near the speed of light.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Mecánica Orbital</h3>
-            <p>Cálculo y optimización de trayectorias de objetos en órbita y misiones espaciales.</p>
+            <h3>Orbital Mechanics</h3>
+            <p>Calculation and optimization of trajectories for objects in orbit and space missions.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Teoría Atómica</h3>
-            <p>Conocimiento de la estructura atómica y comportamiento de partículas subatómicas.</p>
+            <h3>Atomic Theory</h3>
+            <p>Knowledge of atomic structure and behavior of subatomic particles.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Propulsión</h3>
-            <p>Diseño y análisis de sistemas de propulsión para vehículos y naves espaciales.</p>
+            <h3>Propulsion</h3>
+            <p>Design and analysis of propulsion systems for vehicles and spacecraft.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Dinámica Aerodinámica</h3>
-            <p>Estudio del movimiento de fluidos y su interacción con superficies sólidas.</p>
+            <h3>Aerodynamic Dynamics</h3>
+            <p>Study of fluid motion and its interaction with solid surfaces.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Optimización de Trayectorias Orbitales</h3>
-            <p>Desarrollo de rutas eficientes para misiones espaciales minimizando consumo energético.</p>
+            <h3>Orbital Trajectory Optimization</h3>
+            <p>Development of efficient routes for space missions minimizing energy consumption.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Simulación Computacional</h3>
-            <p>Creación de modelos numéricos para predecir comportamientos físicos complejos.</p>
+            <h3>Computational Simulation</h3>
+            <p>Creation of numerical models to predict complex physical behaviors.</p>
           </div>
           
-          <h3 style="color:var(--muted);font-size:16px;margin-top:35px">Actualmente estudiando</h3>
-          <p style="color:var(--muted)">Relatividad General • Mecánica Cuántica</p>
+          <h3 style="color:var(--muted);font-size:16px;margin-top:35px">Currently studying</h3>
+          <p style="color:var(--muted)">General Relativity • Quantum Mechanics</p>
         </div>`
     },
     matematicas: {
-      name: "Matemáticas",
+      name: "Mathematics",
       icon: "∫",
       color: 0xff6b9d,
       size: 6,
       distance: 45,
       speed: 0.3,
-      content: `<h2>∫ Matemáticas</h2>
+      content: `<h2>∫ Mathematics</h2>
         <div style="margin-top:30px">
           <div class="skill-block">
-            <h3>Cálculo I, II y III</h3>
-            <p>Dominio completo de límites, derivadas, integrales y series en múltiples dimensiones.</p>
+            <h3>Calculus I, II and III</h3>
+            <p>Complete mastery of limits, derivatives, integrals and series in multiple dimensions.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Cálculo Vectorial</h3>
-            <p>Análisis de campos vectoriales, gradientes, divergencia y rotacional en espacios multidimensionales.</p>
+            <h3>Vector Calculus</h3>
+            <p>Analysis of vector fields, gradients, divergence and curl in multidimensional spaces.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Teoría de Conjuntos</h3>
-            <p>Fundamentos de matemática discreta, lógica y estructuras algebraicas.</p>
+            <h3>Set Theory</h3>
+            <p>Foundations of discrete mathematics, logic and algebraic structures.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Geometría</h3>
-            <p>Comprensión profunda de formas, espacios y sus propiedades en diferentes dimensiones.</p>
+            <h3>Geometry</h3>
+            <p>Deep understanding of shapes, spaces and their properties in different dimensions.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Trigonometría</h3>
-            <p>Dominio de funciones trigonométricas y sus aplicaciones en física e ingeniería.</p>
+            <h3>Trigonometry</h3>
+            <p>Mastery of trigonometric functions and their applications in physics and engineering.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Álgebra</h3>
-            <p>Manipulación de expresiones algebraicas, ecuaciones y sistemas complejos.</p>
+            <h3>Algebra</h3>
+            <p>Manipulation of algebraic expressions, equations and complex systems.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Cálculo Tensorial</h3>
-            <p>Análisis avanzado usando tensores para física teórica y relatividad general.</p>
+            <h3>Tensor Calculus</h3>
+            <p>Advanced analysis using tensors for theoretical physics and general relativity.</p>
           </div>
         </div>`
     },
     programacion: {
-      name: "Programación",
+      name: "Programming",
       icon: "💻",
       color: 0xffd43b,
       size: 5,
       distance: 70,
       speed: 0.2,
-      content: `<h2>💻 Programación</h2>
+      content: `<h2>💻 Programming</h2>
         <div style="margin-top:30px">
           <div class="skill-block">
-            <h3>Ciberseguridad en Python</h3>
-            <p>Desarrollo especializado de herramientas de seguridad, análisis de vulnerabilidades y hacking ético.</p>
+            <h3>Cybersecurity in Python</h3>
+            <p>Specialized development of security tools, vulnerability analysis and ethical hacking.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Lenguaje C</h3>
-            <p>Programación de bajo nivel, gestión de memoria y optimización de rendimiento.</p>
+            <h3>C Language</h3>
+            <p>Low-level programming, memory management and performance optimization.</p>
           </div>
           
-          <h3 style="margin-top:35px;color:var(--accent)">Proyectos Destacados</h3>
+          <h3 style="margin-top:35px;color:var(--accent)">Featured Projects</h3>
           
           <div class="skill-block">
-            <h3>Calculadora Avanzada</h3>
-            <p>Herramienta matemática con soporte para integrales indefinidas, derivadas simbólicas y funciones no convencionales.</p>
-          </div>
-          
-          <div class="skill-block">
-            <h3>Suite de Ciberseguridad</h3>
-            <p>Generador de contraseñas seguras, analizador de fortaleza y verificador de estado de páginas web.</p>
+            <h3>Advanced Calculator</h3>
+            <p>Mathematical tool with support for indefinite integrals, symbolic derivatives and unconventional functions.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Conversor Numérico</h3>
-            <p>Conversión bidireccional entre sistemas binario y decimal con interfaz intuitiva.</p>
+            <h3>Cybersecurity Suite</h3>
+            <p>Secure password generator, strength analyzer and web page status checker.</p>
           </div>
           
           <div class="skill-block">
-            <h3>Lanzador de Aplicaciones</h3>
-            <p>Acceso rápido personalizado al menú de inicio de Windows.</p>
+            <h3>Numeric Converter</h3>
+            <p>Bidirectional conversion between binary and decimal systems with intuitive interface.</p>
           </div>
           
-          <h3 style="margin-top:35px;color:var(--accent)">Contribuciones</h3>
-          <p>• Bot de IA para Discord con procesamiento de lenguaje natural<br>• Herramienta RAT (Remote Access Trojan) para investigación de seguridad</p>
+          <div class="skill-block">
+            <h3>Application Launcher</h3>
+            <p>Custom quick access to Windows Start Menu.</p>
+          </div>
+          
+          <h3 style="margin-top:35px;color:var(--accent)">Contributions</h3>
+          <p>• AI Discord Bot with natural language processing<br>• RAT (Remote Access Trojan) tool for security research</p>
         </div>`
     }
   };
