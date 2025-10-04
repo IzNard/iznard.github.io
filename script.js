@@ -168,18 +168,15 @@ const profileStatusText = document.getElementById('profile-status-text');
   };
 
   startBtn.addEventListener('click', () => {
-  // 👇 Nueva línea
   if (backgroundMusic) {
     backgroundMusic.play().catch(error => {
       console.error("Autoplay failed:", error);
-      // Puedes añadir lógica para un botón de 'play' si falla el autoplay.
     });
   }
 
   createBigBang();
   setTimeout(() => {
     intro.classList.add('hidden');
-    // ... (el resto del código del listener)
   }, 2000);
   });
   
@@ -1044,4 +1041,5 @@ class DynamicFavicon {
 }
 
 const dynamicFavicon = new DynamicFavicon();
+
 dynamicFavicon.createTextFavicon('IZ', '#000000', '#00ff00');
