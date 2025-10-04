@@ -12,6 +12,7 @@ const profileStatusText = document.getElementById('profile-status-text');
   const discordStatusWidget = document.getElementById('discordStatus');
   const backgroundMusic = document.getElementById('backgroundMusic');
   let scene, camera, renderer, grid, planets = [], isZoomed = false;
+  const boom = document.getElementById('backgroundMusic');
   let selectedPlanet = null;
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
@@ -166,9 +167,20 @@ const profileStatusText = document.getElementById('profile-status-text');
         </div>`
     }
   };
-
-  
-  
+  startBtn.addEventListener('click', () => {
+    initThreeJS(); // <--- Add this line here
+    const backgroundMusic = new Audio('boom.mp3'); 
+    backgroundMusic.volume = 0.5; // Sets volume to 50%
+    
+    // 5. Play the audio
+    backgroundMusic.play().catch(error => {
+        // This catch handles errors if the browser prevents auto-play
+        console.error("Audio playback failed:", error);
+        
+    });
+    createBigBang();
+    
+});
   function createBigBang() {
     const particleCount = 300;
     const btnRect = startBtn.getBoundingClientRect();
@@ -483,7 +495,7 @@ function fetchLanyardData() {
 }
 fetchLanyardData();
 setInterval(fetchLanyardData, 15000);
-  function initThreeJS() {
+function initThreeJS() {
     scene = new THREE.Scene();
 
     renderer = new THREE.WebGLRenderer({antialias:true, alpha:true, premultipliedAlpha: false});
@@ -510,7 +522,7 @@ setInterval(fetchLanyardData, 15000);
     backTop.addEventListener('click', resetView);
     fetchLanyardData();
     setInterval(fetchLanyardData, 10000);
-  }
+}
 
   function createSpacetimeGrid() {
     const GRID_SIZE = 500;
