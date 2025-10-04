@@ -167,18 +167,7 @@ const profileStatusText = document.getElementById('profile-status-text');
     }
   };
 
-  startBtn.addEventListener('click', () => {
-  if (backgroundMusic) {
-    backgroundMusic.play().catch(error => {
-      console.error("Autoplay failed:", error);
-    });
-  }
-
-  createBigBang();
-  setTimeout(() => {
-    intro.classList.add('hidden');
-  }, 2000);
-});
+  
   
   function createBigBang() {
     const particleCount = 300;
