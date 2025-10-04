@@ -174,7 +174,7 @@ const profileStatusText = document.getElementById('profile-status-text');
     backgroundMusic.play().catch(error => {
         console.error("Audio playback failed:", error);
     });
-    createBigBang();
+    initThreeJS();
     
 });
   function createBigBang() {
