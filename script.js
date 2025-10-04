@@ -175,9 +175,6 @@ const profileStatusText = document.getElementById('profile-status-text');
   }
 
   createBigBang();
-  if (typeof initializeScene === 'function') {
-      initializeScene(); 
-  }
   setTimeout(() => {
     intro.classList.add('hidden');
   }, 2000);
