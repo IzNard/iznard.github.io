@@ -168,8 +168,11 @@ const profileStatusText = document.getElementById('profile-status-text');
   };
   startBtn.addEventListener('click', () => { 
     createBigBang();
+    
+    setTimeout(() => {
+      initThreeJS();
+    }, 2000); // 2 seconds wait (adjust as needed)
     intro.classList.add('hidden');
-    initThreeJS();
     const backgroundMusic = new Audio('boom.mp3'); 
     backgroundMusic.volume = 0.5;
     
@@ -1043,6 +1046,7 @@ class DynamicFavicon {
 const dynamicFavicon = new DynamicFavicon();
 
 dynamicFavicon.createTextFavicon('IZ', '#000000', '#00ff00');
+
 
 
 
