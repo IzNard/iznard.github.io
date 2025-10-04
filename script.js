@@ -167,15 +167,12 @@ const profileStatusText = document.getElementById('profile-status-text');
     }
   };
   startBtn.addEventListener('click', () => {
-    initThreeJS(); // <--- Add this line here
     const backgroundMusic = new Audio('boom.mp3'); 
-    backgroundMusic.volume = 0.5; // Sets volume to 50%
+    backgroundMusic.volume = 0.5;
     
     // 5. Play the audio
     backgroundMusic.play().catch(error => {
-        // This catch handles errors if the browser prevents auto-play
         console.error("Audio playback failed:", error);
-        
     });
     createBigBang();
     
