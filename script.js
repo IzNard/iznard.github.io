@@ -10,6 +10,7 @@ const profileStatusText = document.getElementById('profile-status-text');
   const statusText = document.getElementById('status-text');
   const LANYARD_URL = "https://api.lanyard.rest/v1/users/964136170051211335";
   const discordStatusWidget = document.getElementById('discordStatus');
+  const backgroundMusic = document.getElementById('backgroundMusic');
   let scene, camera, renderer, grid, planets = [], isZoomed = false;
   let selectedPlanet = null;
   const raycaster = new THREE.Raycaster();
@@ -167,15 +168,19 @@ const profileStatusText = document.getElementById('profile-status-text');
   };
 
   startBtn.addEventListener('click', () => {
-    createBigBang();
-    setTimeout(() => {
-      intro.classList.add('hidden');
-      footerTip.style.opacity = '0';
-      setTimeout(() => {
-        intro.style.display = 'none';
-        initThreeJS();
-      }, 500);
-    }, 2000);
+  // 👇 Nueva línea
+  if (backgroundMusic) {
+    backgroundMusic.play().catch(error => {
+      console.error("Autoplay failed:", error);
+      // Puedes añadir lógica para un botón de 'play' si falla el autoplay.
+    });
+  }
+
+  createBigBang();
+  setTimeout(() => {
+    intro.classList.add('hidden');
+    // ... (el resto del código del listener)
+  }, 2000);
   });
   
   function createBigBang() {
