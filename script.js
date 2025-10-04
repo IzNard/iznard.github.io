@@ -10,7 +10,6 @@ const profileStatusText = document.getElementById('profile-status-text');
   const statusText = document.getElementById('status-text');
   const LANYARD_URL = "https://api.lanyard.rest/v1/users/964136170051211335";
   const discordStatusWidget = document.getElementById('discordStatus');
-  const backgroundMusic = document.getElementById('backgroundMusic');
   let scene, camera, renderer, grid, planets = [], isZoomed = false;
   let selectedPlanet = null;
   const raycaster = new THREE.Raycaster();
@@ -1032,3 +1031,4 @@ class DynamicFavicon {
 const dynamicFavicon = new DynamicFavicon();
 
 dynamicFavicon.createTextFavicon('IZ', '#000000', '#00ff00');
+
