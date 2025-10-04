@@ -18,8 +18,12 @@
     #details{position:fixed;right:0;top:0;width:50%;height:100vh;background:rgba(5,6,10,0.98);padding:60px;overflow:auto;z-index:90;opacity:0;pointer-events:none;transition:opacity 0.5s}
     #details.open{opacity:1;pointer-events:all}
     #details h2{font-size:42px;margin:0 0 30px 0;color:var(--accent)}
-    #details h3{font-size:20px;margin:25px 0 10px 0;color:#fff}
-    #details p, #details li{font-size:16px;line-height:1.7;color:#c5d1de;margin:8px 0}
+    #details h3{font-size:18px;margin:25px 0 8px 0;color:#fff;font-weight:600}
+    #details p{font-size:15px;line-height:1.8;color:#9aa6b2;margin:0 0 20px 0}
+    #details .skill-block{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px;margin:15px 0;transition:all 0.3s ease}
+    #details .skill-block:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);box-shadow:0 4px 20px rgba(125,249,255,0.1)}
+    #details .skill-block h3{margin-top:0}
+    #details .skill-block p{margin-bottom:0}
     #details ul{list-style:none;padding:0}
     #details li:before{content:"• ";color:var(--accent);font-weight:bold;margin-right:8px}
     #backTop{position:fixed;left:20px;top:20px;padding:12px 16px;border-radius:8px;background:rgba(125,249,255,0.15);color:var(--accent);z-index:90;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s;border:1px solid rgba(125,249,255,0.3);font-size:18px}
@@ -63,27 +67,55 @@
       distance: 0,
       speed: 0,
       content: `<h2>⚛️ Física</h2>
-        <h3>Especializado en:</h3>
-        <ul>
-          <li>Mecánica Clásica</li>
-        </ul>
-        <h3>Experienciado en:</h3>
-        <ul>
-          <li>Electromagnetismo</li>
-          <li>Relatividad Especial</li>
-          <li>Mecánica Orbital</li>
-          <li>Teoría Atómica</li>
-          <li>Investigación Científica</li>
-          <li>Propulsión</li>
-          <li>Dinámica Aerodinámica</li>
-          <li>Optimización de Trayectorias Orbitales</li>
-          <li>Simulación Computacional</li>
-        </ul>
-        <h3>Estudiando:</h3>
-        <ul>
-          <li>Relatividad General</li>
-          <li>Mecánica Cuántica</li>
-        </ul>`
+        <div style="margin-top:30px">
+          <div class="skill-block">
+            <h3>Mecánica Clásica</h3>
+            <p>Especialización profunda en los principios fundamentales del movimiento y las fuerzas.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Electromagnetismo</h3>
+            <p>Comprensión de campos eléctricos y magnéticos, y sus aplicaciones prácticas.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Relatividad Especial</h3>
+            <p>Dominio de la teoría de Einstein sobre el espacio-tiempo y velocidades cercanas a la luz.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Mecánica Orbital</h3>
+            <p>Cálculo y optimización de trayectorias de objetos en órbita y misiones espaciales.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Teoría Atómica</h3>
+            <p>Conocimiento de la estructura atómica y comportamiento de partículas subatómicas.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Propulsión</h3>
+            <p>Diseño y análisis de sistemas de propulsión para vehículos y naves espaciales.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Dinámica Aerodinámica</h3>
+            <p>Estudio del movimiento de fluidos y su interacción con superficies sólidas.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Optimización de Trayectorias Orbitales</h3>
+            <p>Desarrollo de rutas eficientes para misiones espaciales minimizando consumo energético.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Simulación Computacional</h3>
+            <p>Creación de modelos numéricos para predecir comportamientos físicos complejos.</p>
+          </div>
+          
+          <h3 style="color:var(--muted);font-size:16px;margin-top:35px">Actualmente estudiando</h3>
+          <p style="color:var(--muted)">Relatividad General • Mecánica Cuántica</p>
+        </div>`
     },
     matematicas: {
       name: "Matemáticas",
@@ -93,46 +125,87 @@
       distance: 45,
       speed: 0.3,
       content: `<h2>∫ Matemáticas</h2>
-        <h3>Especializado en:</h3>
-        <ul>
-          <li>Cálculo I, II y III</li>
-        </ul>
-        <h3>Experienciado en:</h3>
-        <ul>
-          <li>Cálculo Vectorial</li>
-          <li>Teoría de Conjuntos (Matemática Discreta)</li>
-          <li>Geometría</li>
-          <li>Trigonometría</li>
-          <li>Álgebra</li>
-          <li>Cálculo Tensorial</li>
-        </ul>`
+        <div style="margin-top:30px">
+          <div class="skill-block">
+            <h3>Cálculo I, II y III</h3>
+            <p>Dominio completo de límites, derivadas, integrales y series en múltiples dimensiones.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Cálculo Vectorial</h3>
+            <p>Análisis de campos vectoriales, gradientes, divergencia y rotacional en espacios multidimensionales.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Teoría de Conjuntos</h3>
+            <p>Fundamentos de matemática discreta, lógica y estructuras algebraicas.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Geometría</h3>
+            <p>Comprensión profunda de formas, espacios y sus propiedades en diferentes dimensiones.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Trigonometría</h3>
+            <p>Dominio de funciones trigonométricas y sus aplicaciones en física e ingeniería.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Álgebra</h3>
+            <p>Manipulación de expresiones algebraicas, ecuaciones y sistemas complejos.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Cálculo Tensorial</h3>
+            <p>Análisis avanzado usando tensores para física teórica y relatividad general.</p>
+          </div>
+        </div>`
     },
-    python: {
-      name: "Python",
-      icon: "🐍",
+    programacion: {
+      name: "Programación",
+      icon: "💻",
       color: 0xffd43b,
       size: 5,
       distance: 70,
       speed: 0.2,
-      content: `<h2>🐍 Python</h2>
-        <h3>Especializado en:</h3>
-        <ul>
-          <li>Desarrollo de programas centrados en ciberseguridad/hacking ético</li>
-        </ul>
-        <h3>Proyectos Creados:</h3>
-        <ul>
-          <li>Lanzador de aplicaciones de Start Menu</li>
-          <li>Calculadora Avanzada (integrales indefinidas, derivadas, etc.)</li>
-          <li>Conversor de Binario a Decimal y viceversa</li>
-          <li>Generador de contraseñas seguras</li>
-          <li>Comprobador de fuerza de contraseñas básico</li>
-          <li>Comprobador de estado de páginas web mediante requests</li>
-        </ul>
-        <h3>Proyectos en los que he contribuido:</h3>
-        <ul>
-          <li>Inteligencia Artificial como bot de Discord</li>
-          <li>RAT (Remote Access Trojan)</li>
-        </ul>`
+      content: `<h2>💻 Programación</h2>
+        <div style="margin-top:30px">
+          <div class="skill-block">
+            <h3>Ciberseguridad en Python</h3>
+            <p>Desarrollo especializado de herramientas de seguridad, análisis de vulnerabilidades y hacking ético.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Lenguaje C</h3>
+            <p>Programación de bajo nivel, gestión de memoria y optimización de rendimiento.</p>
+          </div>
+          
+          <h3 style="margin-top:35px;color:var(--accent)">Proyectos Destacados</h3>
+          
+          <div class="skill-block">
+            <h3>Calculadora Avanzada</h3>
+            <p>Herramienta matemática con soporte para integrales indefinidas, derivadas simbólicas y funciones no convencionales.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Suite de Ciberseguridad</h3>
+            <p>Generador de contraseñas seguras, analizador de fortaleza y verificador de estado de páginas web.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Conversor Numérico</h3>
+            <p>Conversión bidireccional entre sistemas binario y decimal con interfaz intuitiva.</p>
+          </div>
+          
+          <div class="skill-block">
+            <h3>Lanzador de Aplicaciones</h3>
+            <p>Acceso rápido personalizado al menú de inicio de Windows.</p>
+          </div>
+          
+          <h3 style="margin-top:35px;color:var(--accent)">Contribuciones</h3>
+          <p>• Bot de IA para Discord con procesamiento de lenguaje natural<br>• Herramienta RAT (Remote Access Trojan) para investigación de seguridad</p>
+        </div>`
     }
   };
 
@@ -224,7 +297,7 @@
   function initThreeJS() {
     scene = new THREE.Scene();
 
-    renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+    renderer = new THREE.WebGLRenderer({antialias:true, alpha:true, premultipliedAlpha: false});
     renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(renderer.domElement);
     
@@ -249,8 +322,8 @@
   }
 
   function createSpacetimeGrid() {
-    const GRID_SIZE = 300;
-    const GRID_SEG = 150;
+    const GRID_SIZE = 500;
+    const GRID_SEG = 200;
     const geom = new THREE.PlaneGeometry(GRID_SIZE, GRID_SIZE, GRID_SEG, GRID_SEG);
     geom.rotateX(-Math.PI/2);
     
@@ -264,7 +337,7 @@
       const distPhysics = Math.sqrt(x*x + z*z);
       y -= 15 / (1 + distPhysics * 0.15);
       
-      // Matemáticas
+      // Matemáticas y Programación
       Object.keys(skillsData).forEach(key => {
         if (key !== 'fisica') {
           const skill = skillsData[key];
@@ -283,23 +356,16 @@
     const mat = new THREE.ShaderMaterial({
       vertexShader: `
         varying vec3 vPos; 
-        varying float vViewZ; 
         void main(){ 
           vPos = position; 
-          vec4 mv = modelViewMatrix * vec4(position, 1.0); 
-          vViewZ = -mv.z; 
-          gl_Position = projectionMatrix * mv; 
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); 
         }`,
       fragmentShader: `
         varying vec3 vPos; 
-        varying float vViewZ; 
         void main(){ 
-          float depthFade = smoothstep(10.0, 250.0, vViewZ); 
-          float alpha = 0.9 - pow(depthFade, 0.8); 
           float dist2 = length(vPos.xz); 
-          float edgeFade = 1.0 - smoothstep(120.0, 280.0, dist2); 
-          alpha *= edgeFade; 
-          gl_FragColor = vec4(1.0, 1.0, 1.0, alpha * 0.6); 
+          float edgeFade = 1.0 - smoothstep(200.0, 250.0, dist2); 
+          gl_FragColor = vec4(1.0, 1.0, 1.0, edgeFade * 0.6); 
         }`,
       transparent: true, 
       wireframe: true,
@@ -339,9 +405,18 @@
       circleCtx.stroke();
       
       const circleTexture = new THREE.CanvasTexture(circleCanvas);
-      const circleSpriteMat = new THREE.SpriteMaterial({map: circleTexture, transparent: true});
+      circleTexture.needsUpdate = true;
+      const circleSpriteMat = new THREE.SpriteMaterial({
+        map: circleTexture, 
+        transparent: true,
+        opacity: 1,
+        depthTest: true,
+        depthWrite: false,
+        blending: THREE.NormalBlending
+      });
       const circleSprite = new THREE.Sprite(circleSpriteMat);
       circleSprite.scale.set(skill.size * 2.2, skill.size * 2.2, 1);
+      circleSprite.renderOrder = 0;
       group.add(circleSprite);
       
       // Icon sprite
@@ -368,10 +443,19 @@
       ctx.fillText(skill.icon, 128, 138);
       
       const texture = new THREE.CanvasTexture(canvas);
-      const spriteMat = new THREE.SpriteMaterial({map: texture, transparent: true});
+      texture.needsUpdate = true;
+      const spriteMat = new THREE.SpriteMaterial({
+        map: texture, 
+        transparent: true,
+        opacity: 1,
+        depthTest: true,
+        depthWrite: false,
+        blending: THREE.NormalBlending
+      });
       const sprite = new THREE.Sprite(spriteMat);
       sprite.scale.set(skill.size * 1.5, skill.size * 1.5, 1);
-      sprite.position.z = 0.1; // Slightly in front of circle
+      sprite.position.z = 0.1;
+      sprite.renderOrder = 1;
       group.add(sprite);
       
       group.userData.skill = key;
