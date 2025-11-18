@@ -138,7 +138,10 @@ const profileStatusText = document.getElementById('profile-status-text');
             <h3>C Language</h3>
             <p>Low-level programming, memory management and performance optimization.</p>
           </div>
-          
+          <div class="skill-block">
+            <h3>C++ Language</h3>
+            <p>Low-level programming language based on C with classes, some abstraction and to certain bounds, automatic heap and stack management.</p>
+          </div>
           <h3 style="margin-top:35px;color:var(--accent)">Featured Projects</h3>
           
           <div class="skill-block">
@@ -1046,6 +1049,7 @@ class DynamicFavicon {
 const dynamicFavicon = new DynamicFavicon();
 
 dynamicFavicon.createTextFavicon('IZ', '#000000', '#00ff00');
+
 
 
 
