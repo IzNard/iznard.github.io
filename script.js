@@ -849,18 +849,18 @@ class DynamicFavicon {
         this.canvas.height = 32;
         this.currentFavicon = null;
 
-        this.originalTitle = 'iznard';
+        this.originalTitle = 'vectxr';
         this.animatedTitles = [
-            '◢ iznard ◣',
-            '◤ iznard ◥',
-            '▲ iznard ▲',
-            '▼ iznard ▼',
-            '◆ iznard ◆',
-            '● iznard ●',
-            '■ iznard ■',
-            '▶ iznard ◀',
-            '♦ iznard ♦',
-            '⬢ iznard ⬢'
+            '◢ vectxr ◣',
+            '◤ vectxr ◥',
+            '▲ vectxr ▲',
+            '▼ vectxr ▼',
+            '◆ vectxr ◆',
+            '● vectxr ●',
+            '■ vectxr ■',
+            '▶ vectxr ◀',
+            '♦ vectxr ♦',
+            '⬢ vectxr ⬢'
         ];
         this.titleIndex = 0;
         this.titleInterval = null;
@@ -985,7 +985,7 @@ class DynamicFavicon {
 
         let isVisible = true;
         this.titleInterval = setInterval(() => {
-            document.title = isVisible ? '🔴 iznard - Come back!' : '● iznard - New activity';
+            document.title = isVisible ? '🔴 vectxr - Come back!' : '● vectxr - New activity';
             isVisible = !isVisible;
         }, 1000);
     }
@@ -1017,25 +1017,25 @@ class DynamicFavicon {
     updateTitleForStatus(status) {
         const statusTitles = {
             online: [
-                '🟢 iznard - Online',
-                '💚 iznard - Active',
-                '✅ iznard - Ready',
-                '🔥 iznard - Coding'
+                '🟢 vectxr - Online',
+                '💚 vectxr - Active',
+                '✅ vectxr - Ready',
+                '🔥 vectxr - Coding'
             ],
             idle: [
-                '🟡 iznard - Away',
-                '😴 iznard - Idle',
-                '⏰ iznard - BRB'
+                '🟡 vectxr - Away',
+                '😴 vectxr - Idle',
+                '⏰ vectxr - BRB'
             ],
             dnd: [
-                '🔴 iznard - Busy',
-                '⛔ iznard - Do not disturb',
-                '🎯 iznard - Focused',
-                '💼 iznard - Working'
+                '🔴 vectxr - Busy',
+                '⛔ vectxr - Do not disturb',
+                '🎯 vectxr - Focused',
+                '💼 vectxr - Working'
             ],
             offline: [
-                '⚫ iznard - Offline',
-                '📵 iznard - Disconnected'
+                '⚫ vectxr - Offline',
+                '📵 vectxr - Disconnected'
             ]
         };
 
@@ -1049,6 +1049,7 @@ class DynamicFavicon {
 const dynamicFavicon = new DynamicFavicon();
 
 dynamicFavicon.createTextFavicon('IZ', '#000000', '#00ff00');
+
 
 
 
